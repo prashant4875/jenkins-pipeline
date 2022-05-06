@@ -17,9 +17,9 @@ pipeline {
   stages {
     stage('Git Checkout'){
       steps{
-        git 'https://gitlab.com/bhadoria1998/declarative-jenkins.git'
+        git credentialsId: '62786928-4f0d-40bb-9a95-1b5deae0a654', url: 'https://github.com/prashant4875/jenkins-pipeline.git'
         sh 'git checkout master'
-        sh 'git pull https://gitlab.com/bhadoria1998/declarative-jenkins.git master'
+        sh 'git pull https://github.com/prashant4875/jenkins-pipeline.git master'
       }
     }
 
